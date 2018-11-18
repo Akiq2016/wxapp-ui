@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/**/*.js'",
+    "add": "chmod +x ./addpkg.sh && ./addpkg.sh"
+  },
   "devDependencies": {
     "@commitlint/cli": "^7.2.0",
     "@commitlint/config-conventional": "^7.1.2",
