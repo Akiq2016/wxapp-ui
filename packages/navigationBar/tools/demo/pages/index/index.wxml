@@ -1,0 +1,61 @@
+<view class="page">
+    <navigation-bar
+        nav-style="{{navStyle}}"
+        text-color="{{textColor}}"
+        bg-color="{{bgColor}}"
+        border-bottom-color="{{borderBottomColor}}"
+        has-tab-bar="{{hasTabBar}}"
+        is-tab-bar="{{isTabBar}}"
+        is-fixed="{{isFixed}}"
+        icon-uri="{{iconUri}}"
+        home-uri="{{homeUri}}"
+        use-custom-handler="{{useCustomHandler}}"
+        bind:leftpage="handleLeftpage">
+        <!-- <image slot="title" style="height: 40rpx; width: 250rpx;" src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg"></image> -->
+        <text slot="title">测试标题长度测试标题长度</text>
+    </navigation-bar>
+
+    <view class="page__main">
+        <view class="page__main__item">
+            <view>nav-style: {{navStyle}}</view>
+            <switch checked bindchange="exchangeNavStyle"/>
+        </view>
+        <view class="page__main__item">
+            <view>has-tab-bar: {{hasTabBar}}</view>
+            <switch bindchange="exchangeHasTabBar"/>
+        </view>
+        <view class="page__main__item">
+            <view>is-tab-bar: {{isTabBar}}</view>
+            <switch bindchange="exchangeIsTabBar"/>
+        </view>
+        <view class="page__main__item">
+            <view>is-fixed: {{isFixed}}</view>
+            <switch checked bindchange="exchangeIsFixed"/>
+        </view>
+        <view class="page__main__item">
+            <view>use-custom-handler: {{useCustomHandler}}</view>
+            <switch bindchange="exchangeUseCustomHandler"/>
+        </view>
+        <view class="page__main__item">
+            <view>text-color: {{textColor}}</view>
+            <input placeholder="自定义标题文字颜色" bindinput="changeTextColor"/>
+        </view>
+        <view class="page__main__item">
+            <view>bg-color: {{bgColor}}</view>
+            <input placeholder="自定义导航条背景颜色" bindinput="changeBgColor"/>
+        </view>
+        <view class="page__main__item">
+            <view>border-bottom-color: {{borderBottomColor}}</view>
+            <input placeholder="自定义导航条 border-bottom 颜色" bindinput="changeBorderBottomColor"/>
+        </view>
+        <view class="page__main__item">
+            <view>icon-uri: {{iconUri}}</view>
+            <input placeholder="自定义图标资源链接" bindinput="changeIconUri"/>
+            <!-- https://wx.qlogo.cn/mmhead/nibxxlib1VaPfsuoiaY6MS0EkicxaSgibmaH3PfmD3W5BfGibGhibramzM2uQ/64 -->
+        </view>
+        <view class="page__main__item">
+            <view>home-uri: {{homeUri}}</view>
+            <input placeholder="设置首页 page uri" bindinput="changeHomeUri"/>
+        </view>
+    </view>
+</view>

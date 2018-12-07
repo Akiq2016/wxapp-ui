@@ -1,0 +1,13 @@
+<view
+    class="navigation-bar"
+    style="{{navigationBarStyle}}; padding-top: {{systemData.statusBarHeight}}px; height: {{systemData.headerBarHeight}}px;">
+    <image
+        wx:if="{{currentIcon}}"
+        bind:tap="handleLeftPage"
+        class="navigation-bar__icon"
+        src="{{currentIcon}}">
+    </image>
+    <view class="navigation-bar__title">
+        <slot name="title"></slot>
+    </view>
+</view>

@@ -1,0 +1,10 @@
+.page {
+    background-color: #ff0;
+}
+.page__main {
+    padding-top: 200rpx;
+}
+.page__main__item {
+    padding: 20rpx;
+    border: 1px solid;
+}

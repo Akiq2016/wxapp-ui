@@ -1,0 +1,3 @@
+<navigation-bar>
+    <text slot="title">aki</text>
+</navigation-bar>
