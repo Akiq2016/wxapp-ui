@@ -1,5 +1,27 @@
 # navigation-bar
 
+## Usage
+install
+```bash
+npm install --save modo-navigationbar
+```
+app.json
+```js
+{
+  "window": {
+    "navigationStyle": "custom"
+  }
+}
+```
+[page].json
+```js
+{
+  "usingComponents": {
+    "navigation-bar": "modo-navigationbar"
+  }
+}
+```
+
 ## Slots
 
 | Name             | Type           | Default        | Description              |
