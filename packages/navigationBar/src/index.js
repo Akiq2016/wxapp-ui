@@ -131,7 +131,6 @@ Component({
           ';border-bottom-width: 1px;border-bottom-style: solid;';
       }
 
-      console.log(navigationBarStyle);
       this.setData({ navigationBarStyle });
     },
     setStyleDict({ type, value, priority = 0 } = {}) {

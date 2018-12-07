@@ -1,6 +1,6 @@
 {
-  "name": "navigationbar",
-  "version": "1.0.0",
+  "name": "modo-navigationbar",
+  "version": "1.0.1",
   "description": "",
   "main": "miniprogram_dist/index.js",
   "scripts": {
