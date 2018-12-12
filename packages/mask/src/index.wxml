@@ -1,0 +1,11 @@
+<view
+    style="{{maskStyle}}"
+    class="mask {{maskStatus ? 'show' : ''}}"
+    catch:tap="handleTapMask"
+    catch:touchmove="noop">
+</view>
+<slot
+    name="content"
+    bind:tap="handleTapMask"
+    catch:touchmove="noop">
+</slot>

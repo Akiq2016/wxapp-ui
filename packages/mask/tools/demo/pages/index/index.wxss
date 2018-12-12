@@ -1,0 +1,31 @@
+.mask-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition-duration: 200ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mask-content--show {
+    z-index: 101;
+    transform: scale(1);
+}
+
+.mask-content .content-detail {
+    height: 100px;
+    width: 200px;
+    background-color: #fff;
+}
+
+.page__main__item {
+    padding: 120rpx;
+    border: 1px solid;
+}
