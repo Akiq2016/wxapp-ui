@@ -1,5 +1,30 @@
 # navigation-bar
 
+## Demo
+[代码片段](https://developers.weixin.qq.com/s/5r2LTumS7d44)
+
+## Usage
+install
+```bash
+npm install --save modo-navigationbar
+```
+app.json
+```js
+{
+  "window": {
+    "navigationStyle": "custom"
+  }
+}
+```
+[page].json
+```js
+{
+  "usingComponents": {
+    "navigation-bar": "modo-navigationbar"
+  }
+}
+```
+
 ## Slots
 
 | Name             | Type           | Default        | Description              |
