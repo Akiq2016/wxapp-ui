@@ -18,23 +18,23 @@
     <view class="page__main">
         <view class="page__main__item">
             <view>nav-style: {{navStyle}}</view>
-            <switch checked bindchange="exchangeNavStyle"/>
+            <switch checked="{{navStyle === 'black'}}" bindchange="exchangeNavStyle"/>
         </view>
         <view class="page__main__item">
             <view>has-tab-bar: {{hasTabBar}}</view>
-            <switch bindchange="exchangeHasTabBar"/>
+            <switch checked="{{hasTabBar}}" bindchange="exchangeHasTabBar"/>
         </view>
         <view class="page__main__item">
             <view>is-tab-bar: {{isTabBar}}</view>
-            <switch bindchange="exchangeIsTabBar"/>
+            <switch checked="{{isTabBar}}" bindchange="exchangeIsTabBar"/>
         </view>
         <view class="page__main__item">
             <view>is-fixed: {{isFixed}}</view>
-            <switch checked bindchange="exchangeIsFixed"/>
+            <switch checked="{{isFixed}}" bindchange="exchangeIsFixed"/>
         </view>
         <view class="page__main__item">
             <view>use-custom-handler: {{useCustomHandler}}</view>
-            <switch bindchange="exchangeUseCustomHandler"/>
+            <switch checked="{{useCustomHandler}}" bindchange="exchangeUseCustomHandler"/>
         </view>
         <view class="page__main__item">
             <view>text-color: {{textColor}}</view>

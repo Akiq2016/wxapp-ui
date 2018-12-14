@@ -115,10 +115,12 @@ Component({
     },
     navigationBarStyle: '',
   },
-  attached() {
-    this.handlePrevPageStatus();
-    this.setIcon();
-    this.setStyle();
+  lifetimes: {
+    attached() {
+      this.handlePrevPageStatus();
+      this.setIcon();
+      this.setStyle();
+    },
   },
   methods: {
     setStyle() {

@@ -1,5 +1,30 @@
 # mask
 
+## Demo
+[代码片段](https://developers.weixin.qq.com/s/z6njJEmj7p4Z)
+
+## Usage
+install
+```bash
+npm install --save modo-mask
+```
+app.json
+```js
+{
+  "window": {
+    "navigationStyle": "custom"
+  }
+}
+```
+[page/component].json
+```js
+{
+  "usingComponents": {
+    "navigation-bar": "modo-mask"
+  }
+}
+```
+
 ## Slots
 
 | Name             | Type           | Default        | Description              |
