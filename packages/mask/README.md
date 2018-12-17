@@ -8,19 +8,11 @@ install
 ```bash
 npm install --save modo-mask
 ```
-app.json
-```js
-{
-  "window": {
-    "navigationStyle": "custom"
-  }
-}
-```
 [page/component].json
 ```js
 {
   "usingComponents": {
-    "navigation-bar": "modo-mask"
+    "mask": "modo-mask"
   }
 }
 ```
@@ -37,7 +29,7 @@ app.json
 | :---------------- |:---------------|:-------------------|:-------------------------|
 | maskStatus        | Boolean        | false              | 设置蒙层的显示状态          |
 | duration          | Number         | 200                | 设置蒙层出现的过渡时间       |
-| bgColor           | String         | rgba(0, 0, 0, 0.5) | 自定义导航条背景颜色        |
+| bgColor           | String         | rgba(0, 0, 0, 0.5) | 自定义蒙层背景颜色        |
 
 ## Events
 
