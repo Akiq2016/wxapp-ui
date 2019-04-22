@@ -1,0 +1,6 @@
+<mask
+    mask-status="{{dialogStatus}}"
+    duration="{{duration}}"
+    bg-color="{{bgColor}}">
+    <view slot="content">{{title}}</view>
+</mask>

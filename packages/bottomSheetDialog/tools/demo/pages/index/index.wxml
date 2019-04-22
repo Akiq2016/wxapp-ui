@@ -1,0 +1,3 @@
+<comp
+    title="{{title}}"
+    dialog-status="{{dialogStatus}}"></comp>
