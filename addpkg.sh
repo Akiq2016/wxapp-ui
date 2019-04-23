@@ -10,7 +10,7 @@ rm -rf "$1/.git"
 echo ''
 
 echo "> try to update config files ..."
-python3 $rootPath/addpkg.py $pkgsPath/$1
+python $rootPath/addpkg.py $pkgsPath/$1
 echo ''
 
 echo "> try to get node_modules ..."
