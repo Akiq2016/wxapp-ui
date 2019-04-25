@@ -1,6 +1,9 @@
-<view class="switch">
+<view class="switch" style="height: {{size}}rpx; line-height: {{size}}rpx;">
     <text wx:if="{{showText}}">{{value ? activeText : inactiveText}}</text>
-    <view class="switch-body {{disabled && 'disabled'}}" bind:tap="handleToggle" style="background-color: {{value ? activedColor : inactiveColor}};">
-        <view class="switch-button" style="left: {{value ? '22px': '3px'}}; background-color: {{dotColor}};"></view>
+    <view class="switch-body {{disabled && 'disabled'}}"
+          bind:tap="handleToggle"
+          style="background-color: {{value ? activedColor : inactiveColor}};width: {{size / 0.6}}rpx;border-radius: {{size/2}}rpx;">
+        <view class="switch-button" style="width: {{size*0.75}}rpx;height: {{size*0.75}}rpx;left: {{value ? size*0.875 : size*0.125}}rpx;background-color: {{dotColor}};"
+        ></view>
     </view>
 </view>

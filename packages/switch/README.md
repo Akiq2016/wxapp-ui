@@ -20,6 +20,7 @@
 | inactive-color | String | #CDD4FF | 关闭状态的背景色 |
 | dot-color | String | #FFFFFF | 开关圆点控件的背景色 |
 | name | String |   | 开关对应的 name 属性 |
+| size | Number |  48 | 高度, 单位: **rpx** |
 ## Events
 | Name | Description | Return |
 | :-----------: | :----------- | :-----------: |

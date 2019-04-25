@@ -11,10 +11,10 @@ Page({
     dotColor: '#FFFFFF',
   },
   handleChange({ detail: { value } }) {
-    wx.showToast({
-      title: `当前值: ${this.data.value ? '开' : '关'}`,
-      icon: 'none',
-    });
-    console.log('change事件触发: ', this.data.value);
+    // wx.showToast({
+    //   title: `当前值: ${value ? '开' : '关'}`,
+    //   icon: 'none',
+    // });
+    console.log('change事件触发: ', value);
   },
 });

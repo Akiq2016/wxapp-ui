@@ -2,15 +2,51 @@
 	<label class="form">
 		<text>正常状态</text>
 		<modo-switch value="{{value}}"
-								 show-text="false"
 								 bind:change="handleChange"
 		></modo-switch>
 	</label>
 	<label class="form">
 		<text>禁用状态</text>
 		<modo-switch value="{{value}}"
-								 show-text="{{showText}}"
 								 disabled="{{disabled}}"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>显示状态文本</text>
+		<modo-switch value="{{value}}"
+								 show-text
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>自定义状态文本(开启/关闭)</text>
+		<modo-switch value="{{value}}"
+								 show-text
+								 active-text="开启"
+								 inactive-text="关闭"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>自定义样式</text>
+		<modo-switch value="{{value}}"
+								 activedColor="rgb(25, 137, 250)"
+								 inactiveColor="rgb(238, 238, 238)"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>自定义大小(size: 32)</text>
+		<modo-switch value="{{value}}"
+								 size="32"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>自定义大小(size: 64)</text>
+		<modo-switch value="{{value}}"
+								 size="64"
 								 bind:change="handleChange"
 		></modo-switch>
 	</label>

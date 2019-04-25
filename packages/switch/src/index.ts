@@ -8,20 +8,21 @@ Component({
       type: Boolean,
       value: false
     },
-    // todo active-text
     activeText: {
       type: String,
       value: '是'
     },
-    // todo inactive-text
     inactiveText: {
       type: String,
       value: '否'
     },
-    // todo disabled
     disabled: {
       type: Boolean,
       value: false
+    },
+    size: {
+      type: Number,
+      value: 48
     },
     // todo width name
     name: {

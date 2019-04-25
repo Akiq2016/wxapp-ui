@@ -2,8 +2,6 @@
 @import "./reset.wxss";
 
 .switch {
-  height: 48rpx;
-  line-height: 48rpx;
   font-size: 32rpx;
   font-style: normal;
   color: #8B8FAE;
@@ -23,6 +21,7 @@
   margin-left: 10rpx;
   position: relative;
   box-sizing: border-box;
+  box-shadow: 0 0 2rpx rgba(26,26,26,0.55) inset;
 }
 
 .switch .switch-body.disabled {
@@ -42,4 +41,5 @@
   z-index: 5;
   transition: all .3s;
   box-sizing: border-box;
+  box-shadow: -1rpx 1rpx 4rpx rgba(26,26,26,0.55);
 }
