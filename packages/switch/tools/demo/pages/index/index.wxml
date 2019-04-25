@@ -1,0 +1,17 @@
+<view class="index">
+	<label class="form">
+		<text>正常状态</text>
+		<modo-switch value="{{value}}"
+								 show-text="false"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+	<label class="form">
+		<text>禁用状态</text>
+		<modo-switch value="{{value}}"
+								 show-text="{{showText}}"
+								 disabled="{{disabled}}"
+								 bind:change="handleChange"
+		></modo-switch>
+	</label>
+</view>

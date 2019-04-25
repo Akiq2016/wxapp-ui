@@ -1,0 +1,30 @@
+modo-swiper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.index {
+    width: 100%;
+}
+
+.index .form-title {
+    font-size: 30rpx;
+    line-height: 60rpx;
+    font-weight: bold;
+}
+
+.index .form-name {
+    margin-right: 24rpx;
+}
+
+.index .space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.index .block-line {
+    display: block;
+}

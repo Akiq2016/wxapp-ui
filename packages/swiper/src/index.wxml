@@ -1,0 +1,38 @@
+<view class="wrapper" style="height: {{height}};" bind:tap="tapSwiper">
+	<swiper class="swiper"
+					duration="500"
+					indicator-dots="{{indicatorType==='dot'}}"
+					indicator-color="{{indicatorColor}}"
+					indicator-active-color="{{indicatorActiveColor}}"
+					autoplay="{{autoplay}}"
+					current="{{current}}"
+					interval="{{interval}}"
+					duration="{{duration}}"
+					circular="{{circular}}"
+					vertical="{{vertical}}"
+					previous-margin="{{previousMargin}}"
+					next-margin="{{nextMargin}}"
+					display-multiple-items="{{displayMultipleItems}}"
+					skip-hidden-item-layout="{{skipHiddenItemLayout}}"
+					easing-function="{{easingFunction}}"
+					bindchange="handleChange"
+					bindtransition="handleTransition"
+					bindanimationfinish="hanldeAnimationFinish"
+	>
+		<swiper-item class="swiper__item" wx:for="{{previewList}}" wx:key="{{index}}" bindtap="navigateTo">
+			<image class="swiper__item__image"
+						 data-i="{{index}}"
+						 binderror="handleError"
+						 lazy-load
+						 src="{{item}}"
+						 mode="{{imageMode}}"></image>
+		</swiper-item>
+	</swiper>
+	<!--<view class="dots" wx:if="{{indicatorType==='dot'}}">-->
+	<!--    <block wx:for="{{previewList}}" wx:key="unique">-->
+	<!--        <view data-i='{{index}}' class="dot {{index == current && 'active'}}"></view>-->
+	<!--    </block>-->
+	<!--</view>-->
+	<view class="indicator {{indicatorType === 'pagination' && indicatorPosition === 'left' ? 'left' : indicatorPosition === 'right' ? 'right' : '' }}"
+				wx:if="{{indicatorType==='pagination'}}">{{current + 1}}/{{previewList.length}}</view>
+</view>

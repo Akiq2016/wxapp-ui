@@ -1,0 +1,116 @@
+<view class="index" style="padding-top: {{height}};">
+	<modo-swiper originalList="{{originalList}}"
+							 indicator-type="{{indicator_type}}"
+							 indicator-position="{{indicator_position}}"
+							 height="{{height}}"
+							 autoplay="{{autoplay}}"
+							 circular="{{circular}}"
+							 interval="{{interval}}"
+							 image-mode="{{image_mode}}"
+							 duration="{{duration}}"
+							 vertical="{{vertical}}"
+							 previous-margin="{{margin}}"
+							 next-margin="{{margin}}"
+							 easing-function="{{easing_function}}"
+							 errImage-replace="https://cdn.pixabay.com/photo/2016/04/24/13/24/error-1349562_960_720.png"
+	></modo-swiper>
+
+		<view>
+		<text class="form-title block-line">height:</text>
+		<slider min="150"
+						max="450"
+						value="{{heightvalue}}"
+						show-value
+						bind:changing="handleHeight"
+		></slider>
+	</view>
+
+	<view>
+		<text class="form-title">indicatorType:</text>
+		<radio-group bind:change="handIndicatorType">
+			<label wx:for="{{indicatorTypeRadio}}" wx:key="{{index}}">
+				<text class="form-name">{{item.name}}:</text>
+				<radio value="{{item.value}}" checked="{{item.value == indicator_type}}"></radio>
+			</label>
+		</radio-group>
+	</view>
+
+	<view>
+		<text class="form-title">indicatorPosition:</text>
+		<radio-group bind:change="handleIndicatorPosition">
+			<label wx:for="{{indicatorPositionRadio}}" wx:key="{{index}}">
+				<text class="form-name">{{item.name}}:</text>
+				<radio value="{{item.value}}" checked="{{item.value == indicator_position}}"></radio>
+			</label>
+		</radio-group>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">autoplay:</text>
+		<switch checked="{{autoplay}}" bind:change="handleAutoplay"></switch>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">circular(是否衔接):</text>
+		<switch checked="{{circular}}" bind:change="handCircular"></switch>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">easing-function(缓动动画类型):</text>
+		<picker mode="selector"
+						range="{{easingFunctionList}}"
+						range-key="name"
+						bind:change="handleEasingFunction"
+		>
+			<text class="form-name">当前: {{easing_function}}</text>
+		</picker>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">image-mode(图片裁剪、缩放的模式):</text>
+		<picker mode="selector"
+						range="{{imageModeList}}"
+						range-key="name"
+						bind:change="handleImageMode"
+		>
+			<text class="form-name">当前: {{image_mode}}</text>
+		</picker>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">interval(自动切换时间间隔):</text>
+		<picker mode="selector"
+						range="{{intervalList}}"
+						range-key="name"
+						value="4"
+						bind:change="handleInterval"
+		>
+			<text class="form-name">当前: {{interval}}ms</text>
+		</picker>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">duration(滑动动画时长	):</text>
+		<picker mode="selector"
+						range="{{durationList}}"
+						range-key="name"
+						value="3"
+						bind:change="handleDuration"
+		>
+			<text class="form-name">当前: {{duration}}ms</text>
+		</picker>
+	</view>
+
+	<view class="space-between">
+		<text class="form-title">vertical(是否为纵向):</text>
+		<switch checked="{{vertical}}" bind:change="handleVertical"></switch>
+	</view>
+
+	<view>
+		<text class="form-title block-line">previous-margin & next-margin(前边距&后边距):</text>
+		<slider max="50"
+						show-value
+						bind:changing="handleMargin"
+		></slider>
+	</view>
+</view>

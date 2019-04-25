@@ -1,0 +1,7 @@
+view, label, button, text{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    font-style: normal;
+}

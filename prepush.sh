@@ -1,9 +1,9 @@
 # Allows us to read user input below, assigns stdin to keyboard
 exec < /dev/tty
 
-while true; do
     echo "Have you updated or added files in the src folder? [y/n]";
     read hasModifiedSrc;
+while true; do
 
     if [[ $hasModifiedSrc == 'y' ]]; then
         break

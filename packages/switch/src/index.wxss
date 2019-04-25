@@ -1,0 +1,45 @@
+@import "./common.wxss";
+@import "./reset.wxss";
+
+.switch {
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 32rpx;
+  font-style: normal;
+  color: #8B8FAE;
+  display: flex;
+  align-items: center;
+}
+
+.switch text {
+  font-style: normal;
+}
+
+.switch .switch-body {
+  width: 80rpx;
+  height: inherit;
+  border-radius: 24rpx;
+  background-color: #656CE8;
+  margin-left: 10rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.switch .switch-body.disabled {
+  cursor: not-allowed;
+}
+
+.switch .switch-body .switch-button {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border-width: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+  transition: all .3s;
+  box-sizing: border-box;
+}

@@ -1,0 +1,63 @@
+@import "./common.wxss";
+@import "./reset.wxss";
+
+.wrapper {
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30rpx;
+  margin: auto;
+  width: 80rpx;
+  min-width: 80rpx;
+  padding: 11rpx 15rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20rpx;
+  z-index: 10;
+}
+
+.indicator.left {
+  right: unset;
+  left: 30rpx;
+}
+.indicator.right {
+  right: 30rpx;
+  left: unset;
+}
+
+.swiper, .swiper__item, .swiper__item__image {
+  width: 100vw;
+  height: 100%;
+}
+
+/*自定义指示点*/
+.wrapper .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .dots .dot {
+  margin: 0 8rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  border: 2rpx solid rgba(229, 70, 68, 1);
+  transition: all 0.3s;
+}
+
+.wrapper .dots .dot.active {
+  width: 12rpx;
+  height: 12rpx;
+  background: #e54644;
+}

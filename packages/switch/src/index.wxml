@@ -1,0 +1,6 @@
+<view class="switch">
+    <text wx:if="{{showText}}">{{value ? activeText : inactiveText}}</text>
+    <view class="switch-body {{disabled && 'disabled'}}" bind:tap="handleToggle" style="background-color: {{value ? activedColor : inactiveColor}};">
+        <view class="switch-button" style="left: {{value ? '22px': '3px'}}; background-color: {{dotColor}};"></view>
+    </view>
+</view>

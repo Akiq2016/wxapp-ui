@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modo-swiper": "/components/index"
+  },
+  "disableSwipeBack": true
+}

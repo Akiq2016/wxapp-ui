@@ -1,0 +1,19 @@
+.index {
+  padding: 38rpx 30rpx;
+  background-color: #f8f9fb;
+}
+
+.index .form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  margin-bottom: 20rpx;
+  padding: 20rpx 10rpx;
+}
+
+.index text {
+  font-size: 32rpx;
+  color: #111111;
+  font-weight: bold;
+}
