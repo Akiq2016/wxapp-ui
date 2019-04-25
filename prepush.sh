@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Allows us to read user input below, assigns stdin to keyboard
 exec < /dev/tty
 

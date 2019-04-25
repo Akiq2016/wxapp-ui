@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/**/*.js'",
-    "add": "bash ./addpkg.sh",
-    "prepush": "chmod +x ./prepush.sh && ./prepush.sh"
+    "add": "sh ./addpkg.sh",
+    "prepush": "sh ./prepush.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.0",
