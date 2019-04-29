@@ -20,6 +20,9 @@ lerna bootstrap --hoist
 添加新组件
 
 ```bash
+# 拉一条新的 feature 分支
+git checkout -b feature-$1
+
 # 在项目根目录下执行
 # 初始化一个名为 $1 变量的组件 放在 packages/$1 目录下 并安装依赖
 npm run add $1
