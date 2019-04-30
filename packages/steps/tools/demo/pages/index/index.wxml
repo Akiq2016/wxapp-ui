@@ -1,0 +1,26 @@
+<view class="panel-group">
+  <view class="panel-title">基础用法</view>
+  
+  <mode-steps
+    steps="{{ steps }}"
+    active="{{ active }}"
+  />
+  
+  <view class="panel-control">
+    <button bind:tap="TapNext">下一步</button>
+  </view>
+</view>
+
+<view class="panel-group">
+  <view class="panel-title">自定义样式</view>
+
+  <mode-steps
+    steps="{{ steps }}"
+    active="{{ active }}"
+    active-color="blue"
+  />
+  
+  <view class="panel-control">
+    <button bind:tap="TapNext">下一步</button>
+  </view>
+</view>

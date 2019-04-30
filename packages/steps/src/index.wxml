@@ -1,0 +1,16 @@
+<view class="modo-steps">
+  <block wx:for="{{steps}}" wx:key="{{index}}">
+    <view  class="modo-step__item {{index <= active ? 'active' : ''}}">
+      <view 
+        class="modo-step__content"
+        style="{{index <= active && activeColor ? 'background-color:'+activeColor : ''}}">
+        {{item.text}}
+      </view>
+      <view 
+        class="modo-step__line" 
+        style="{{index <= active && activeColor ? 'background-color:'+activeColor : ''}}"
+        wx:if="{{index !== 0}}">
+      </view>
+    </view>
+  </block>
+</view>
