@@ -1,0 +1,50 @@
+.page__main__item {
+    padding: 20rpx;
+    border: 1px solid;
+}
+
+/* 
+custom-dots
+custom-dots-item
+custom-dots-item-active
+*/
+.custom-indicator-dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20rpx;
+	display: flex;
+	justify-content: center;
+}
+
+.custom-indicator-dots-item {
+	margin: 0 8rpx;
+	width: 12rpx;
+	height: 12rpx;
+	border-radius: 50%;
+	border: 2rpx solid rgba(229, 70, 68, 1);
+	transition: all 0.3s;
+}
+
+.custom-indicator-dots-item-active {
+	width: 12rpx;
+	height: 12rpx;
+	background: #e54644;
+}
+
+/* 
+custom-indicator-fraction
+*/
+.custom-indicator-fraction {
+	position: absolute;
+	left: 30rpx;
+	bottom: 50rpx;
+	line-height: 1;
+	min-width: 80rpx;
+	padding: 11px 15rpx;
+	font-size: 22px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 48rpx;
+	text-align: center;
+}

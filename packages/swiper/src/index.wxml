@@ -1,0 +1,72 @@
+<wxs module="swiperModule">
+function getFractionStyle(color, bgColor) {
+    var result = '';
+
+    if (color) {
+        result += 'color: ' + color + '; '
+    }
+
+    if (bgColor) {
+        result += 'background-color: ' + bgColor + '; '
+    }
+
+    return result;
+}
+
+module.exports = {
+    getFractionStyle: getFractionStyle,
+}
+</wxs>
+
+<view
+    class="swiper__wrapper"
+    style="height: {{height}}"
+    bind:tap="handleTapSwiper"
+>
+    <swiper
+        class="swiper"
+        duration="{{duration}}"
+        indicator-dots="{{indicatorType === 'dots'}}"
+        indicator-color="{{indicatorDotsColor}}"
+        indicator-active-color="{{indicatorDotsActiveColor}}"
+        bind:change="handleChangeSwiper"
+    >
+        <swiper-item
+            class="swiper__item"
+            wx:for="{{thumbnailList}}"
+            wx:key="*this"
+        >
+            <image
+                class="swiper__item__image"
+                lazy-load="true"
+                mode="{{imageMode}}"
+                data-index="{{index}}"
+                src="{{item}}"
+                binderror="handleSwiperImageError"
+            />
+        </swiper-item>
+    </swiper>
+    <block wx:if="{{listLength !== 0 && indicatorType !== 'dots'}}">
+        <!-- *-fraction -->
+        <view
+            wx:if="{{indicatorType === 'fraction' || indicatorType === 'custom-fraction'}}"
+            class="{{indicatorType === 'fraction' ? 'swiper__indicator--fraction' : 'custom-fraction'}}"
+            style="{{indicatorType === 'fraction' ? swiperModule.getFractionStyle(indicatorFractionColor, indicatorFractionBgColor) : ''}}"
+        >
+            {{currentSwiperIndex + 1}}/{{listLength}}
+        </view>
+        <!-- custom-dots -->
+        <view
+            wx:if="{{indicatorType === 'custom-dots'}}"
+            class="custom-dots"
+        >
+            <view
+                class="custom-dots-item {{index === currentSwiperIndex ? 'custom-dots-item-active' : ''}}"
+                wx:for="{{thumbnailList}}"
+                wx:key="*this"
+            />
+        </view>
+        <!-- custom -->
+        <slot name="indicator"></slot>
+    </block>
+</view>
