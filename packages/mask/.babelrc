@@ -17,6 +17,7 @@
         "loose": true,
         "modules": "commonjs"
       }
-    ]
+    ],
+    ["typescript"],
   ]
 }
