@@ -1,65 +1,64 @@
 <comp
-    height="{{height}}"
-    thumbnail-list="{{imgList}}"
-    duration="{{duration}}"
-    image-mode="{{imageMode}}"
-    indicator-type="{{indicatorType}}"
-    indicator-dots-color="{{indicatorDotsColor}}"
-    indicator-dots-active-color="{{indicatorDotsActiveColor}}"
-    indicator-fraction-color="{{indicatorFractionColor}}"
-    indicator-fraction-bg-color="{{indicatorFractionBgColor}}"
-    custom-dots="custom-indicator-dots"
-    custom-dots-item="custom-indicator-dots-item"
-    custom-dots-item-active="custom-indicator-dots-item-active"
-    custom-fraction="custom-indicator-fraction"
+  height="{{height}}"
+  thumbnail-list="{{imgList}}"
+  duration="{{duration}}"
+  image-mode="{{imageMode}}"
+  indicator-type="{{indicatorType}}"
+  indicator-dots-color="{{indicatorDotsColor}}"
+  indicator-dots-active-color="{{indicatorDotsActiveColor}}"
+  indicator-fraction-color="{{indicatorFractionColor}}"
+  indicator-fraction-bg-color="{{indicatorFractionBgColor}}"
+  custom-dots="custom-indicator-dots"
+  custom-dots-item="custom-indicator-dots-item"
+  custom-dots-item-active="custom-indicator-dots-item-active"
+  custom-fraction="custom-indicator-fraction"
 ></comp>
 
 <view class="page__main">
-    <view class="page__main__item">
-        <view>height: {{height}}</view>
-        <input placeholder="carousel的高度" bindchange="handleChangeheight"/>
-    </view>
-    <view class="page__main__item">
-        <view>duration: {{duration}}</view>
-        <input placeholder="滑动动画时长" bindchange="handleChangeduration" type="number"/>
-    </view>
-    <view class="page__main__item">
-        <view>image-mode: {{imageMode}}</view>
-        <picker
-            mode="selector"
-            bindchange="handleChangeimageMode"
-            range="{{imageModeList}}"
-            value="{{index}}"
-        >
-            <view class="picker">当前选择：{{imageMode || imageModeList[index]}}</view>
-        </picker>
-    </view>
-    <view class="page__main__item">
-        <view>indicator-type: {{indicatorType}}</view>
-        <picker
-            mode="selector"
-            bindchange="handleChangeindicatorType"
-            range="{{indicatorTypeList}}"
-            value="{{index}}"
-        >
-            <view class="picker">当前选择：{{indicatorType || indicatorTypeList[index]}}</view>
-        </picker>
-    </view>
-    <view class="page__main__item">
-        <view>indicator-dots-color: {{indicatorDotsColor}}</view>
-        <input placeholder="indicatorType 为 dots 时可用的参数" bindinput="handleChangeindicatorDotsColor"/>
-    </view>
-    <view class="page__main__item">
-        <view>indicator-dots-active-color: {{indicatorDotsActiveColor}}</view>
-        <input placeholder="indicatorType 为 dots 时可用的参数" bindinput="handleChangeindicatorDotsActiveColor"/>
-    </view>
-    <view class="page__main__item">
-        <view>indicator-fraction-color: {{indicatorFractionColor}}</view>
-        <input placeholder="indicatorType 为 fraction 时可用的参数" bindinput="handleChangeindicatorFractionColor"/>
-    </view>
-    <view class="page__main__item">
-        <view>indicator-fraction-bg-color: {{indicatorFractionBgColor}}</view>
-        <input placeholder="indicatorType 为 fraction 时可用的参数" bindinput="handleChangeindicatorFractionBgColor"/>
-        <!-- https://wx.qlogo.cn/mmhead/nibxxlib1VaPfsuoiaY6MS0EkicxaSgibmaH3PfmD3W5BfGibGhibramzM2uQ/64 -->
-    </view>
+  <view class="page__main__item">
+    <view>height: {{height}}</view>
+    <input placeholder="carousel的高度" bindchange="handleChangeheight" />
+  </view>
+  <view class="page__main__item">
+    <view>duration: {{duration}}</view>
+    <input placeholder="滑动动画时长" bindchange="handleChangeduration" type="number" />
+  </view>
+  <view class="page__main__item">
+    <view>image-mode: {{imageMode}}</view>
+    <picker
+      mode="selector"
+      bindchange="handleChangeimageMode"
+      range="{{imageModeList}}"
+      value="{{index}}"
+    >
+      <view class="picker">当前选择：{{imageMode || imageModeList[index]}}</view>
+    </picker>
+  </view>
+  <view class="page__main__item">
+    <view>indicator-type: {{indicatorType}}</view>
+    <picker
+      mode="selector"
+      bindchange="handleChangeindicatorType"
+      range="{{indicatorTypeList}}"
+      value="{{index}}"
+    >
+      <view class="picker">当前选择：{{indicatorType || indicatorTypeList[index]}}</view>
+    </picker>
+  </view>
+  <view class="page__main__item">
+    <view>indicator-dots-color: {{indicatorDotsColor}}</view>
+    <input placeholder="indicatorType 为 dots 时可用的参数" bindinput="handleChangeindicatorDotsColor" />
+  </view>
+  <view class="page__main__item">
+    <view>indicator-dots-active-color: {{indicatorDotsActiveColor}}</view>
+    <input placeholder="indicatorType 为 dots 时可用的参数" bindinput="handleChangeindicatorDotsActiveColor" />
+  </view>
+  <view class="page__main__item">
+    <view>indicator-fraction-color: {{indicatorFractionColor}}</view>
+    <input placeholder="indicatorType 为 fraction 时可用的参数" bindinput="handleChangeindicatorFractionColor" />
+  </view>
+  <view class="page__main__item">
+    <view>indicator-fraction-bg-color: {{indicatorFractionBgColor}}</view>
+    <input placeholder="indicatorType 为 fraction 时可用的参数" bindinput="handleChangeindicatorFractionBgColor" />
+  </view>
 </view>

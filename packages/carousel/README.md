@@ -1,9 +1,5 @@
 # carousel
 
-## Demo
-
-[代码片段](https://developers.weixin.qq.com/s/Ni7Rx1mt7i8C)
-
 ## Usage
 
 install
