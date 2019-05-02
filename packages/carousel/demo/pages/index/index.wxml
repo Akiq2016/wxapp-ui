@@ -1,6 +1,6 @@
 <comp
     height="{{height}}"
-    original-list="{{imgList}}"
+    thumbnail-list="{{imgList}}"
     duration="{{duration}}"
     image-mode="{{imageMode}}"
     indicator-type="{{indicatorType}}"
