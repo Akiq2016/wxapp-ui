@@ -1,6 +1,6 @@
 {
-  "name": "modo-navigationbar",
-  "version": "1.0.3",
+  "name": "miniprogram-custom-component",
+  "version": "1.0.0",
   "description": "",
   "main": "miniprogram_dist/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
       "src"
     ]
   },
-  "repository": "https://github.com/modojs/wxapp-ui/tree/master/packages/navigationBar",
+  "repository": "",
   "author": "akiq",
   "license": "MIT",
   "devDependencies": {

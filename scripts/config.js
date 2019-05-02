@@ -3,27 +3,30 @@ const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
+const cwd = process.cwd();
+
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
-const demoSrc = path.resolve(__dirname, './demo');
-const demoDist = path.resolve(__dirname, '../miniprogram_dev');
-const src = path.resolve(__dirname, '../src');
+const demoSrc = path.resolve(cwd, './demo');
+const demoDist = path.resolve(cwd, './miniprogram_dev');
+const src = path.resolve(cwd, './src');
 const dev = path.join(demoDist, 'components');
-const dist = path.resolve(__dirname, '../miniprogram_dist');
+const dist = path.resolve(cwd, './miniprogram_dist');
 
 module.exports = {
   entry: ['index'],
 
   isDev,
   isWatch,
-  srcPath: src,
-  distPath: isDev ? dev : dist,
+  srcPath: src, // 源目录
+  distPath: isDev ? dev : dist, // 目标目录
 
-  demoSrc,
-  demoDist,
+  demoSrc, // demo 源目录
+  demoDist, // demo 目标目录
 
   wxss: {
     sass: true,
+    sourcemap: false, // 生成 sass sourcemap
   },
 
   webpack: {
@@ -32,8 +35,8 @@ module.exports = {
       filename: '[name].js',
       libraryTarget: 'commonjs2',
     },
-    target: 'node',
-    externals: [nodeExternals()], // ignore node_modules
+    target: 'node', // in order to ignore built-in modules like path, fs, etc.
+    externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
     module: {
       rules: [
         {
@@ -51,14 +54,14 @@ module.exports = {
               options: {
                 fix: true,
                 typeCheck: true,
-                configFile: './tsconfig.json',
-                configuration: './tslint.json',
+                configFile: path.resolve(__dirname, '../tslint.json'),
+                tsConfigFile: path.resolve(__dirname, '../tsconfig.json'),
               },
             },
           ],
         },
         {
-          test: /\.ts?$/,
+          test: /\.tsx?$/,
           include: /src/,
           exclude: /node_modules/,
           use: [
@@ -73,13 +76,10 @@ module.exports = {
       ],
     },
     resolve: {
-      modules: [src, 'node_modules'],
+      modules: ['node_modules'],
       extensions: ['.js', '.json', 'ts', 'tsx'],
     },
-    plugins: [
-      new webpack.DefinePlugin({}),
-      new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
-    ],
+    plugins: [new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 })],
     optimization: {
       minimize: false,
     },
@@ -90,5 +90,5 @@ module.exports = {
     },
   },
 
-  copy: ['./wxml', './wxss', './wxs', './images'], // will copy to dist
+  copy: ['./images'], // will copy to dist
 };

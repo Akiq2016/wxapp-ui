@@ -1,12 +1,24 @@
+const fs = require('fs');
+const path = require('path');
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 
-const config = require('./tools/config');
-const BuildTask = require('./tools/build');
-const id = require('./package.json').name || 'miniprogram-custom-component';
+const config = require('./scripts/config');
+const BuildTask = require('./scripts/build');
 
-// build task instance
-// eslint-disable-next-line no-new
+function collectId() {
+  console.log(process.cwd(), path.resolve(process.cwd(), './package.json'));
+  const curPackagePath = path.resolve(process.cwd(), './package.json');
+  const hasPackageJson = fs.existsSync(curPackagePath);
+  return hasPackageJson ? require(curPackagePath).name : null;
+}
+
+const id = collectId();
+
+if (!id || id === 'root') throw new Error('当前目录没有package.json');
+
+// // build task instance
+// // eslint-disable-next-line no-new
 new BuildTask(id, config.entry);
 
 // clean the generated folders and files
