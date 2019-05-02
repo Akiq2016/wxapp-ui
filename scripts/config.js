@@ -7,7 +7,7 @@ const cwd = process.cwd();
 
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
-const demoSrc = path.resolve(cwd, './tools/demo');
+const demoSrc = path.resolve(cwd, './demo');
 const demoDist = path.resolve(cwd, './miniprogram_dev');
 const src = path.resolve(cwd, './src');
 const dev = path.join(demoDist, 'components');

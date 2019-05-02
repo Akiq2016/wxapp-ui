@@ -19,8 +19,8 @@ def main():
     res = json.dumps(pkgData, indent=2)
     f.write(res)
 
-  # update tools/demo/project.config.json
-  projectFilePath = pkgPath + '/tools/demo/project.config.json'
+  # update demo/project.config.json
+  projectFilePath = pkgPath + '/demo/project.config.json'
   projectFile = open(projectFilePath)
   projectData = projectFile.read()
   projectFile.close()

@@ -1,14 +1,8 @@
 const _ = require('./utils');
 
-let componentId;
-let component;
-
-beforeAll(async () => {
-  componentId = await _.load('index', 'comp');
-});
-
 test('render', async () => {
-  component = _.render(componentId, { prop: 'index.test.properties' });
+  const componentId = _.load('index', 'comp');
+  const component = _.render(componentId, { prop: 'index.test.properties' });
 
   const parent = document.createElement('parent-wrapper');
   component.attach(parent);
@@ -16,7 +10,16 @@ test('render', async () => {
   expect(
     _.match(
       component.dom,
-      '<wx-view class="index">index.test.properties</wx-view>'
+      '<wx-view class="comp--index comp--other">index.test.properties-false</wx-view>'
     )
-  ).toBe(true);
+  ).toBe(false);
+
+  await _.sleep(10);
+
+  expect(
+    _.match(
+      component.dom,
+      '<wx-view class="comp--index comp--other">index.test.properties-true</wx-view>'
+    )
+  ).toBe(false);
 });

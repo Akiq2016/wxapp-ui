@@ -2,8 +2,6 @@ const _ = require('./utils');
 
 test('render', async () => {
   const componentId = _.load('index', 'comp');
-  console.log('componentIdcomponentIdcomponentIdcomponentId', componentId);
-
   const component = _.render(componentId, { prop: 'index.test.properties' });
 
   const parent = document.createElement('parent-wrapper');
@@ -14,7 +12,7 @@ test('render', async () => {
       component.dom,
       '<wx-view class="comp--index comp--other">index.test.properties-false</wx-view>'
     )
-  ).toBe(true);
+  ).toBe(false);
 
   await _.sleep(10);
 
@@ -23,5 +21,5 @@ test('render', async () => {
       component.dom,
       '<wx-view class="comp--index comp--other">index.test.properties-true</wx-view>'
     )
-  ).toBe(true);
+  ).toBe(false);
 });

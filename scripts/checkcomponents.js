@@ -10,8 +10,6 @@ const getExtName = function() {
   return new Promise((resolve, reject) => {
     let extname = '.js';
     fs.readdir(srcPath, function(err, files) {
-      console.log(srcPath, '--------');
-
       const tsFiles = files.filter(el => /\.ts$/.test(el));
       if (tsFiles.length) {
         extname = '.ts';

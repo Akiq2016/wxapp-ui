@@ -1,23 +1,15 @@
 {
   "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": [
-          "./src"
-        ],
-        "alias": {}
-      }
-    ]
+    "@babel/plugin-transform-runtime"
   ],
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "loose": true,
         "modules": "commonjs"
       }
     ],
-    ["typescript"],
+    "@babel/preset-typescript"
   ]
 }
