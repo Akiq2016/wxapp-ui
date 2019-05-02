@@ -14,7 +14,6 @@ def main():
   with open(pkgFilePath, 'w') as f:
     pkgData = json.loads(pkgData)
     pkgData['name'] = 'modo-' + pkgName.lower()
-    pkgData['homepage'] = 'https://github.com/modojs/wxapp-ui'
     pkgData['repository'] = 'https://github.com/modojs/wxapp-ui/tree/master/packages/' + pkgName
     res = json.dumps(pkgData, indent=2)
     f.write(res)

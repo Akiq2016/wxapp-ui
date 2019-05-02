@@ -1,0 +1,54 @@
+{
+  "name": "miniprogram-custom-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "miniprogram_dist/index.js",
+  "scripts": {
+    "dev": "gulp dev --develop --cwd $PWD",
+    "watch": "gulp watch --develop --watch --cwd $PWD",
+    "build": "gulp --cwd $PWD",
+    "clean-dev": "gulp clean --develop --cwd $PWD",
+    "clean": "gulp clean --cwd $PWD",
+    "test": "jest ./test/* --bail",
+    "coverage": "jest ./test/* --coverage --bail",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint-demo": "eslint \"demo/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
+  },
+  "miniprogram": "miniprogram_dist",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testURL": "https://jest.test",
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ],
+    "moduleFileExtensions": [
+      "js", "ts", "json", "jsx", "tsx", "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "repository": "",
+  "author": "akiq",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "homepage": "https://github.com/modojs/wxapp-ui"
+}
