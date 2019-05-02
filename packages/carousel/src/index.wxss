@@ -1,0 +1,24 @@
+.carousel__wrapper {
+	position: relative;
+}
+
+.carousel,
+.carousel__item,
+.carousel__item__image {
+	width: 100vw;
+	height: 100%;
+}
+
+.carousel__indicator--fraction {
+	position: absolute;
+	right: 30rpx;
+	bottom: 30rpx;
+	line-height: 1;
+	min-width: 80rpx;
+	padding: 11rpx 15rpx;
+	font-size: 22rpx;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 48rpx;
+	text-align: center;
+}
