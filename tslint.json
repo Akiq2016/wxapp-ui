@@ -1,7 +1,6 @@
 {
   "extends": [
-    "tslint:recommended",
-    "tslint-config-prettier"
+    "tslint:recommended"
   ],
   "lib": [
     "ES2015",

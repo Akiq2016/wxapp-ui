@@ -7,11 +7,13 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
+const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 const gulpInstall = require('gulp-install');
 
 const config = require('./config');
 const checkComponents = require('./checkcomponents');
+const checkWxss = require('./checkwxss');
 const _ = require('./utils');
 
 const wxssConfig = config.wxss || {};
@@ -26,9 +28,15 @@ function wxss(wxssFileList) {
 
   return gulp
     .src(wxssFileList, { cwd: srcPath, base: srcPath })
+    .pipe(checkWxss.start()) // 开始处理 import
+    .pipe(gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.init()))
     .pipe(gulpif(wxssConfig.sass, sass({ paths: [srcPath] })))
+    .pipe(checkWxss.end()) // 结束处理 import
     .pipe(postcss([autoprefixer()]))
     .pipe(rename({ extname: '.wxss' }))
+    .pipe(
+      gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.write('./'))
+    )
     .pipe(_.logger(wxssConfig.sass ? 'generate' : undefined))
     .pipe(gulp.dest(distPath));
 }

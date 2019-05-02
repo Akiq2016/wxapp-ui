@@ -33,11 +33,11 @@ npm run add $1
 ```bash
 # [开发目录]
 # $1/src/*
-# $1/tools/demo/*
+# $1/demo/*
 
 # [结构解释]
 # src下是组件开发
-# tools/demo下是小程序demo开发 该demo自动引用了src目录下的组件
+# demo下是小程序demo开发 该demo自动引用了src目录下的组件
 
 # 执行以下命令 会生成 $1/miniprogram_dev 目录
 # 微信开发者工具打开对应组件目录下的 miniprogram_dev 文件夹进行开发调试
