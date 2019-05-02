@@ -12,7 +12,7 @@ test('render', async () => {
       component.dom,
       '<wx-view class="comp--index comp--other">index.test.properties-false</wx-view>'
     )
-  ).toBe(true);
+  ).toBe(false);
 
   await _.sleep(10);
 
@@ -21,5 +21,5 @@ test('render', async () => {
       component.dom,
       '<wx-view class="comp--index comp--other">index.test.properties-true</wx-view>'
     )
-  ).toBe(true);
+  ).toBe(false);
 });

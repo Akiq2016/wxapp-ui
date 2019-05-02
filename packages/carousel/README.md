@@ -1,4 +1,4 @@
-# swiper
+# carousel
 
 ## Demo
 
@@ -9,7 +9,7 @@
 install
 
 ```bash
-npm install --save modo-swiper
+npm install --save modo-carousel
 ```
 
 [page/component].json
@@ -17,7 +17,7 @@ npm install --save modo-swiper
 ```js
 {
   "usingComponents": {
-    "swiper": "modo-swiper"
+    "carousel": "modo-carousel"
   }
 }
 ```
@@ -32,7 +32,7 @@ npm install --save modo-swiper
 
 | Name              | Type           | Default            | Description                                |
 | :---------------- |:---------------|:-------------------|:-------------------------------------------|
-| height            | string         | 100vw              | swiper的高度                                |
+| height            | string         | 100vw              | carousel的高度                                |
 | originalList      | string[]       |                    | 必填。原图列表；供给 wx.previewImage 使用      |
 | thumbnailList     | string[]       |                    | 选填。缩略图列表；未填写则使用 originalList 的值 |
 | duration          | number         | 500                | 微信小程序swiper组件的参数：滑动动画时长         |
@@ -47,8 +47,8 @@ npm install --save modo-swiper
 
 | Name              | Type           | Default            | Description                         |
 | :---------------- |:---------------|:-------------------|:------------------------------------|
-| tapswiper         | bind           | noop               | 点击swiper的事件。                    |
-| changeswiper      | bind           | noop               | 切换swiper的事件。可以监听该事件用于设置 custom indicator 的 active index |
+| tapcarousel       | bind           | noop               | 点击carousel的事件。                  |
+| changecarousel    | bind           | noop               | 切换carousel的事件。可以监听该事件用于设置 custom indicator 的 active index |
 | imgerror          | bind           | noop               | 当图片加载错误发生时自动触发。可以监听该事件用于替换报错图片为缺省图等 |
 
 ### externalClasses

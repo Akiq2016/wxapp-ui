@@ -1,4 +1,4 @@
-<wxs module="swiperModule">
+<wxs module="carouselModule">
 function getFractionStyle(color, bgColor) {
     var result = '';
 
@@ -19,30 +19,30 @@ module.exports = {
 </wxs>
 
 <view
-    class="swiper__wrapper"
+    class="carousel__wrapper"
     style="height: {{height}}"
-    bind:tap="handleTapSwiper"
+    bind:tap="handleTapCarousel"
 >
     <swiper
-        class="swiper"
+        class="carousel"
         duration="{{duration}}"
         indicator-dots="{{indicatorType === 'dots'}}"
         indicator-color="{{indicatorDotsColor}}"
         indicator-active-color="{{indicatorDotsActiveColor}}"
-        bind:change="handleChangeSwiper"
+        bind:change="handleChangeCarousel"
     >
         <swiper-item
-            class="swiper__item"
+            class="carousel__item"
             wx:for="{{thumbnailList}}"
             wx:key="*this"
         >
             <image
-                class="swiper__item__image"
+                class="carousel__item__image"
                 lazy-load="true"
                 mode="{{imageMode}}"
                 data-index="{{index}}"
                 src="{{item}}"
-                binderror="handleSwiperImageError"
+                binderror="handleCarouselImageError"
             />
         </swiper-item>
     </swiper>
@@ -50,10 +50,10 @@ module.exports = {
         <!-- *-fraction -->
         <view
             wx:if="{{indicatorType === 'fraction' || indicatorType === 'custom-fraction'}}"
-            class="{{indicatorType === 'fraction' ? 'swiper__indicator--fraction' : 'custom-fraction'}}"
-            style="{{indicatorType === 'fraction' ? swiperModule.getFractionStyle(indicatorFractionColor, indicatorFractionBgColor) : ''}}"
+            class="{{indicatorType === 'fraction' ? 'carousel__indicator--fraction' : 'custom-fraction'}}"
+            style="{{indicatorType === 'fraction' ? carouselModule.getFractionStyle(indicatorFractionColor, indicatorFractionBgColor) : ''}}"
         >
-            {{currentSwiperIndex + 1}}/{{listLength}}
+            {{currentCarouselIndex + 1}}/{{listLength}}
         </view>
         <!-- custom-dots -->
         <view
@@ -61,7 +61,7 @@ module.exports = {
             class="custom-dots"
         >
             <view
-                class="custom-dots-item {{index === currentSwiperIndex ? 'custom-dots-item-active' : ''}}"
+                class="custom-dots-item {{index === currentCarouselIndex ? 'custom-dots-item-active' : ''}}"
                 wx:for="{{thumbnailList}}"
                 wx:key="*this"
             />

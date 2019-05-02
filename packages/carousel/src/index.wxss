@@ -1,15 +1,15 @@
-.swiper__wrapper {
+.carousel__wrapper {
 	position: relative;
 }
 
-.swiper,
-.swiper__item,
-.swiper__item__image {
+.carousel,
+.carousel__item,
+.carousel__item__image {
 	width: 100vw;
 	height: 100%;
 }
 
-.swiper__indicator--fraction {
+.carousel__indicator--fraction {
 	position: absolute;
 	right: 30rpx;
 	bottom: 30rpx;

@@ -17,7 +17,7 @@
 <view class="page__main">
     <view class="page__main__item">
         <view>height: {{height}}</view>
-        <input placeholder="swiper的高度" bindchange="handleChangeheight"/>
+        <input placeholder="carousel的高度" bindchange="handleChangeheight"/>
     </view>
     <view class="page__main__item">
         <view>duration: {{duration}}</view>

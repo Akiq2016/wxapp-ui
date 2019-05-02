@@ -14,7 +14,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.2.3",
   "appid": "wx2568d33f16fab734",
-  "projectname": "modo-swiper",
+  "projectname": "modo-carousel",
   "isGameTourist": false,
   "condition": {
     "search": {

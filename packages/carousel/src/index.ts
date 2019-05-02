@@ -10,19 +10,12 @@ Component({
   ],
   data: {
     listLength: 0,
-    currentSwiperIndex: 0,
+    currentCarouselIndex: 0,
   },
   properties: {
-    originalList: {
-      type: Array,
-      observer(newVal: string) {
-        if (!Array.isArray(this.data.thumbnailList) || !this.data.thumbnailList.length) {
-          this.setData({ thumbnailList: newVal });
-        }
-      }
-    },
     thumbnailList: {
       type: Array,
+      value: [],
       observer(newVal: string) {
         this.setData({ listLength: newVal.length });
       }
@@ -61,30 +54,23 @@ Component({
     }
   },
   methods: {
-    handleTapSwiper() {
-      if (~this.data.originalList[0].indexOf('http')) {
-        wx.previewImage({
-          urls: this.data.originalList,
-          current: this.data.originalList[this.data.currentSwiperIndex]
-        });
-
-        this.triggerEvent('tapswiper', {
-          index: this.data.currentSwiperIndex
-        });
-      }
+    handleTapCarousel() {
+      this.triggerEvent('tapcarousel', {
+        index: this.data.currentCarouselIndex
+      });
     },
 
-    handleChangeSwiper({ detail }: WXEventBasic) {
+    handleChangeCarousel({ detail }: WXEventBasic) {
       this.setData({
-        currentSwiperIndex: detail.current,
+        currentCarouselIndex: detail.current,
       });
 
-      this.triggerEvent('changeswiper', {
+      this.triggerEvent('changecarousel', {
         index: detail.current
       });
     },
 
-    handleSwiperImageError({
+    handleCarouselImageError({
       currentTarget: {
         dataset: { index }
       }
