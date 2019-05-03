@@ -19,6 +19,10 @@ done
 echo "write app.json & components files ..."
 node genLib.js
 
+# replace component url
+find $libpath -name "*.json" | xargs sed -i .tmp "s/\"\/components\/index\"/\"..\/..\/components\/index\/index\"/g"
+find $libpath -name "*.json.tmp" | xargs rm -rf
+
 # run tsc wxss build
 cd $rootpath/library
 echo $PWD
