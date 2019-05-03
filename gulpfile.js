@@ -3,8 +3,8 @@ const path = require('path');
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 
-const config = require('./scripts/config');
-const BuildTask = require('./scripts/build');
+const config = require('./scripts/compilePkgs/config');
+const BuildTask = require('./scripts/compilePkgs/build');
 
 function collectId() {
   console.log(process.cwd(), path.resolve(process.cwd(), './package.json'));

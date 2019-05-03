@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootPath = __dirname;
+const rootPath = path.join(__dirname, '..');
 const libPath = path.join(rootPath, 'library/src');
 
 // write components.js file

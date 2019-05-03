@@ -9,7 +9,7 @@ cp -r $rootPath/.template/PACKAGE_TEMPLATE/ $pkgsPath/$1/
 echo ''
 
 echo "> try to update config files ..."
-python $rootPath/addpkg.py $pkgsPath/$1
+python $rootPath/scripts/addpkg.py $pkgsPath/$1
 echo ''
 
 echo "> try to get node_modules ..."

@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/**/*.js'",
-    "add": "sh ./addpkg.sh",
-    "prepush": "sh ./prepush.sh",
-    "genpreview": "sh ./genLib.sh"
+    "add": "sh ./scripts/addpkg.sh",
+    "prepush": "sh ./scripts/prepush.sh",
+    "genpreview": "sh ./scripts/genLib.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.0",

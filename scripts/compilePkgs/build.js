@@ -108,9 +108,7 @@ function install() {
     async () => {
       const demoDist = config.demoDist;
       const demoPackageJsonPath = path.join(demoDist, 'package.json');
-      const packageJson = _.readJson(
-        path.resolve(__dirname, '../package.json')
-      );
+      const packageJson = _.readJson(path.resolve(srcPath, '../package.json'));
       const dependencies = packageJson.dependencies || {};
 
       await _.writeFile(
@@ -391,7 +389,7 @@ class BuildTask {
      * watch installed packages
      */
     gulp.task(`${id}-watch-install`, () =>
-      gulp.watch(path.resolve(__dirname, '../package.json'), install())
+      gulp.watch(path.resolve(srcPath, '../package.json'), install())
     );
 
     /**

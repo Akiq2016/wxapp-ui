@@ -54,8 +54,8 @@ module.exports = {
               options: {
                 fix: true,
                 typeCheck: true,
-                configFile: path.resolve(__dirname, '../tslint.json'),
-                tsConfigFile: path.resolve(__dirname, '../tsconfig.json'),
+                configFile: path.resolve(__dirname, '../../tslint.json'),
+                tsConfigFile: path.resolve(__dirname, '../../tsconfig.json'),
               },
             },
           ],
