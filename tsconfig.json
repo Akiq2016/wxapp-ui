@@ -12,7 +12,7 @@
     "noImplicitThis": false
   },
   "files": [
-    "./wxAPI.d.ts"
+    "wxAPI.d.ts"
   ],
   "lib": [
     "es5",
@@ -29,6 +29,7 @@
     "node_modules"
   ],
   "include": [
-    "packages/**/*.ts"
-  ]
+    "packages/**/*.ts",
+    "library/**/*.ts"
+  ],
 }
