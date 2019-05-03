@@ -4,6 +4,7 @@ const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const rename = require('gulp-rename');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('../tsconfig.json');
 
@@ -17,8 +18,7 @@ gulp.task('build:js', done =>
 );
 
 gulp.task('build:ts', done => {
-  const tsRes = gulp.src(['src/**/*.ts']).pipe(tsProject());
-
+  const tsRes = gulp.src(['../wxAPI.d.ts', 'src/**/*.ts']).pipe(tsProject());
   return tsRes.js.pipe(gulp.dest('dist'));
 });
 
@@ -27,6 +27,7 @@ gulp.task('build:wxss', done =>
     .src('src/**/*.wxss')
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
+    .pipe(rename({ extname: '.wxss' }))
     .pipe(gulp.dest('dist'))
 );
 
