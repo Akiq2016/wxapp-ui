@@ -20,7 +20,7 @@ def main():
 
   # update demo/project.config.json
   projectFilePath = pkgPath + '/demo/project.config.json'
-  projectFile = open(projectFilePath)
+  projectFile = open(projectFilePath, 'r', encoding='UTF-8')
   projectData = projectFile.read()
   projectFile.close()
 
