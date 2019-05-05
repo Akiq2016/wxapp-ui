@@ -7,8 +7,14 @@ const config = require('./scripts/compilePkgs/config');
 const BuildTask = require('./scripts/compilePkgs/build');
 
 function collectId() {
-  console.log(process.cwd(), path.resolve(process.cwd(), './package.json'));
-  const curPackagePath = path.resolve(process.cwd(), './package.json');
+  console.log(
+    process.cwd(),
+    path.resolve(process.cwd(), `./packages/${process.env.PKG_ID}/package.json`)
+  );
+  const curPackagePath = path.resolve(
+    process.cwd(),
+    `./packages/${process.env.PKG_ID}/package.json`
+  );
   const hasPackageJson = fs.existsSync(curPackagePath);
   return hasPackageJson ? require(curPackagePath).name : null;
 }
