@@ -2,13 +2,13 @@ Page({
   data: {
     steps: [
       {
-        text: '一',
+        text: '1',
       },
       {
-        text: '二',
+        text: '2',
       },
       {
-        text: '三',
+        text: '3',
       },
     ],
     active: 0,

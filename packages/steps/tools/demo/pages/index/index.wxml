@@ -1,11 +1,40 @@
 <view class="panel-group">
+  <view class="panel-title">properties</view>
+  <view class="panel-properties">
+    <view class="row">
+      <vew class="column">参数</vew>
+      <vew class="column">说明</vew>
+      <vew class="column">类型</vew>
+    </view>
+    <view class="row">
+      <vew class="column">steps</vew>
+      <vew class="column">步骤条数据</vew>
+      <vew class="column">Array</vew>
+    </view>
+    <view class="row">
+      <vew class="column">active</vew>
+      <vew class="column">激活的下标</vew>
+      <vew class="column">Number</vew>
+    </view>
+    <view class="row">
+      <vew class="column">activeColor</vew>
+      <vew class="column">激活的背景颜色</vew>
+      <vew class="column">String</vew>
+    </view>
+    <view class="row">
+      <vew class="column">doneImg</vew>
+      <vew class="column">完成的背景图片</vew>
+      <vew class="column">String</vew>
+    </view>
+  </view>
+</view>
+
+<view class="panel-group">
   <view class="panel-title">基础用法</view>
-  
   <mode-steps
     steps="{{ steps }}"
     active="{{ active }}"
   />
-  
   <view class="panel-control">
     <button bind:tap="TapNext">下一步</button>
   </view>
@@ -13,13 +42,12 @@
 
 <view class="panel-group">
   <view class="panel-title">自定义样式</view>
-
   <mode-steps
     steps="{{ steps }}"
     active="{{ active }}"
-    active-color="blue"
+    active-color="#afa"
+    done-img="http://yed-m-website.oss-cn-hangzhou.aliyuncs.com/topic/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190505143440.png"
   />
-  
   <view class="panel-control">
     <button bind:tap="TapNext">下一步</button>
   </view>
