@@ -1,14 +1,19 @@
 # mask
 
 ## Demo
+
 [代码片段](https://developers.weixin.qq.com/s/z6njJEmj7p4Z)
 
 ## Usage
+
 install
+
 ```bash
 npm install --save modo-mask
 ```
+
 [page/component].json
+
 ```js
 {
   "usingComponents": {

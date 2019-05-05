@@ -1,0 +1,9 @@
+<view class='components'>
+  <view
+    wx:for="{{componentList}}"
+    wx:key="{{index}}"
+    data-url="{{item.url}}"
+    bind:tap="goToComponentDemoPage"
+    class='components__item'
+  >{{item.name}}</view>
+</view>

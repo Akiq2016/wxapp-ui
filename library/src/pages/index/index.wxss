@@ -1,0 +1,20 @@
+.components {
+  display: inline-block;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ededed;
+}
+
+.components__item {
+  background-color: #fff;
+  margin: 20rpx;
+  padding: 40rpx 50rpx;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  transition: opacity 200ms;
+}
+
+.components__item:hover {
+  opacity: 0.8;
+}

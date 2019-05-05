@@ -1,0 +1,32 @@
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "pages": [
+    "pages/index/index"
+  ],
+  "subpackages": [
+    {
+      "root": "carousel",
+      "pages": [
+        "pages/index/index"
+      ]
+    },
+    {
+      "root": "mask",
+      "pages": [
+        "pages/index/index"
+      ]
+    },
+    {
+      "root": "navigationBar",
+      "pages": [
+        "pages/index/index",
+        "pages/index2/index2"
+      ]
+    }
+  ]
+}
