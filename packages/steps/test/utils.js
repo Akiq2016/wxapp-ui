@@ -1,7 +1,7 @@
 const path = require('path');
 const simulate = require('miniprogram-simulate');
 
-const config = require('../tools/config');
+const config = require('../../../scripts/compilePkgs/config');
 
 const srcPath = config.srcPath;
 const oldLoad = simulate.load;

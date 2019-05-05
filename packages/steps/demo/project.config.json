@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.3",
 	"appid": "wx2568d33f16fab734",
-	"projectname": "miniprogram-demo",
+	"projectname": "modo-steps",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

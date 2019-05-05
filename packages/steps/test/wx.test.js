@@ -1,4 +1,4 @@
-// const _ = require('./utils');
+const _ = require('./utils');
 
 test('wx.getSystemInfo', async () => {
   wx.getSystemInfo({
