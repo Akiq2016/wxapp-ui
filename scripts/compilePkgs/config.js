@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
-const cwd = process.cwd();
+const cwd = path.join(process.cwd(), `./packages/${process.env.PKG_ID}`);
 
 const isDev = process.argv.indexOf('--develop') >= 0;
 const isWatch = process.argv.indexOf('--watch') >= 0;
