@@ -4,11 +4,11 @@
   "description": "",
   "main": "miniprogram_dist/index.js",
   "scripts": {
-    "dev": "gulp dev --develop --cwd $PWD",
-    "watch": "gulp watch --develop --watch --cwd $PWD",
-    "build": "gulp --cwd $PWD",
-    "clean-dev": "gulp clean --develop --cwd $PWD",
-    "clean": "gulp clean --cwd $PWD",
+    "dev": "cross-env PKG_ID=steps gulp dev --develop",
+    "watch": "cross-env PKG_ID=steps gulp watch --develop --watch",
+    "build": "cross-env PKG_ID=steps gulp",
+    "clean-dev": "cross-env PKG_ID=steps gulp clean --develop",
+    "clean": "cross-env PKG_ID=steps gulp clean",
     "test": "jest ./test/* --bail",
     "coverage": "jest ./test/* --coverage --bail",
     "lint": "eslint \"src/**/*.js\"",
@@ -39,8 +39,9 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
     "babel-jest": "^24.7.1",
-    "jest": "^24.7.1",
-    "gulp": "^4.0.0"
+    "cross-env": "^5.2.0",
+    "gulp": "^4.0.0",
+    "jest": "^24.7.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4"

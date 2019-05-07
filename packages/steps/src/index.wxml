@@ -6,7 +6,7 @@
         <view
           class="modo-step__content--img"
           wx:if="{{index < active}}">
-          <image src="{{doneImg}}" mode="aspectFit"></image>  
+          <image src="{{doneImg}}" mode="aspectFit"></image>
         </view>
         <view
           class="modo-step__content--text {{index === active ? 'active' : ''}}"
@@ -16,8 +16,8 @@
         </view>
 
       </view>
-      <view 
-        class="modo-step__line" 
+      <view
+        class="modo-step__line"
         style="{{index <= active && activeColor ? 'background-color:'+activeColor : ''}}"
         wx:if="{{index !== 0}}">
       </view>
