@@ -1,3 +1,9 @@
+@import '../../../styles/mixins/index.scss';
+
+@include b(block) {
+  @include clearfix();
+}
+
 .carousel__wrapper {
 	position: relative;
 }

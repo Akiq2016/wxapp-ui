@@ -1,0 +1,51 @@
+@import '../theme/_config';
+
+@mixin b($block) {
+  .#{$namespace+'-'+$block} {
+    @content;
+  }
+}
+
+@mixin e($elements) {
+  $currentSelector: "";
+
+  @each $element in $elements {
+    $currentSelector: #{$currentSelector + & + $element-separator + $element + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifiers) {
+  $currentSelector: "";
+
+  @each $modifier in $modifiers {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $modifier + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($pseudo) {
+  @at-root {
+    &#{':#{$pseudo}'} {
+      @content;
+    }
+  }
+}
