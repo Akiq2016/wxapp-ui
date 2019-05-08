@@ -1,4 +1,4 @@
-@import '../../../styles/mixins/index.scss';
+@import '../../../styles/mixins/';
 
 @include b(block) {
   @include clearfix();

@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack');
 const gulpInstall = require('gulp-install');
 
+sass.compiler = require('sass');
 const config = require('./config');
 const checkComponents = require('./checkcomponents');
 const checkWxss = require('./checkwxss');
@@ -26,19 +27,21 @@ const distPath = config.distPath;
 function wxss(wxssFileList) {
   if (!wxssFileList.length) return false;
 
-  return gulp
-    .src(wxssFileList, { cwd: srcPath, base: srcPath })
-    .pipe(checkWxss.start()) // 开始处理 import
-    .pipe(gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.init()))
-    .pipe(gulpif(wxssConfig.sass, sass({ paths: [srcPath] })))
-    .pipe(checkWxss.end()) // 结束处理 import
-    .pipe(postcss([autoprefixer()]))
-    .pipe(rename({ extname: '.wxss' }))
-    .pipe(
-      gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.write('./'))
-    )
-    .pipe(_.logger(wxssConfig.sass ? 'generate' : undefined))
-    .pipe(gulp.dest(distPath));
+  return (
+    gulp
+      .src(wxssFileList, { cwd: srcPath, base: srcPath })
+      // .pipe(checkWxss.start()) // 开始处理 import
+      .pipe(gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.init()))
+      .pipe(gulpif(wxssConfig.sass, sass({ paths: [srcPath] })))
+      // .pipe(checkWxss.end()) // 结束处理 import
+      .pipe(postcss([autoprefixer()]))
+      .pipe(rename({ extname: '.wxss' }))
+      .pipe(
+        gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.write('./'))
+      )
+      .pipe(_.logger(wxssConfig.sass ? 'generate' : undefined))
+      .pipe(gulp.dest(distPath))
+  );
 }
 
 /**
