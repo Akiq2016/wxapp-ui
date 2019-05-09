@@ -22,7 +22,12 @@
       "src/**/*.{js,ts}"
     ],
     "moduleFileExtensions": [
-      "js", "ts", "json", "jsx", "tsx", "node"
+      "js",
+      "ts",
+      "json",
+      "jsx",
+      "tsx",
+      "node"
     ],
     "moduleDirectories": [
       "node_modules",

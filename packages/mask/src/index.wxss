@@ -1,4 +1,6 @@
-.mask {
+@import '../../../styles/mixins/';
+
+@include b(mask) {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,9 +11,9 @@
 	transform: translateX(100%);
   transition-property: opacity;
   transition-timing-function: ease-in-out;
-}
 
-.show {
-	opacity: 1;
-	transform: translateX(0);
+  @include when(show) {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

@@ -100,7 +100,7 @@ function readJson(filePath) {
  */
 async function readFile(filePath) {
   try {
-    return await readFileSync(filePath, 'utf8');
+    return readFileSync(filePath, 'utf8');
   } catch (err) {
     // eslint-disable-next-line no-console
     return console.error(err);
