@@ -1,6 +1,6 @@
 <view
     style="{{maskStyle}}"
-    class="mask {{maskStatus ? 'show' : ''}}"
+    class="modo-mask {{maskStatus ? 'is-show' : ''}}"
     catch:tap="handleTapMask"
     catch:touchmove="noop">
 </view>

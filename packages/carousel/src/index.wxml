@@ -19,12 +19,12 @@ module.exports = {
 </wxs>
 
 <view
-  class="carousel__wrapper"
+  class="modo-carousel__wrapper"
   style="height: {{height}}"
   bind:tap="handleTapCarousel"
 >
   <swiper
-    class="carousel"
+    class="modo-carousel"
     duration="{{duration}}"
     indicator-dots="{{indicatorType === 'dots'}}"
     indicator-color="{{indicatorDotsColor}}"
@@ -32,12 +32,12 @@ module.exports = {
     bind:change="handleChangeCarousel"
   >
     <swiper-item
-      class="carousel__item"
+      class="modo-carousel__item"
       wx:for="{{thumbnailList}}"
       wx:key="*this"
     >
       <image
-        class="carousel__item__image"
+        class="modo-carousel__item__image"
         lazy-load="true"
         mode="{{imageMode}}"
         data-index="{{index}}"
@@ -50,7 +50,7 @@ module.exports = {
     <!-- *-fraction -->
     <view
       wx:if="{{indicatorType === 'fraction' || indicatorType === 'custom-fraction'}}"
-      class="{{indicatorType === 'fraction' ? 'carousel__indicator--fraction' : 'custom-fraction'}}"
+      class="{{indicatorType === 'fraction' ? 'modo-carousel__indicator--fraction' : 'custom-fraction'}}"
       style="{{indicatorType === 'fraction' ? carouselModule.getFractionStyle(indicatorFractionColor, indicatorFractionBgColor) : ''}}"
     >
       {{currentCarouselIndex + 1}}/{{listLength}}

@@ -1,29 +1,30 @@
-.navigation-bar {
+@import '../../../styles/mixins/';
+
+@include b(navigation-bar) {
+  @include flex-cross-center();
+
   position: relative;
 	left: 0;
   right: 0;
   z-index: 105;
-  display: flex;
-  align-items: center;
-}
 
-.navigation-bar__icon {
-  position: relative;
-  z-index: 1;
-  padding: 0 28rpx;
-  width: 40rpx;
-  height: 40rpx;
-}
+  @include e(icon) {
+    position: relative;
+    z-index: 1;
+    padding: 0 28rpx;
+    width: 40rpx;
+    height: 40rpx;
+  }
 
-.navigation-bar__title {
-  position: absolute;
-	left: 0;
-  right: 0;
-  flex: 1;
-  padding: 0 200rpx;
-  font-size: 16px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
+  @include e(title) {
+    @include ellipse-text();
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    flex: 1;
+    padding: 0 200rpx;
+    font-size: 16px;
+    text-align: center;
+  }
 }
