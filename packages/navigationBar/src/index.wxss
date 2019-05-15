@@ -1,4 +1,4 @@
-@import '../../../styles/mixins/';
+@import 'mixins/';
 
 @include b(navigation-bar) {
   @include flex-cross-center();

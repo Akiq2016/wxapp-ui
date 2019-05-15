@@ -1,3 +1,4 @@
+const path = require('path');
 const gulp = require('gulp');
 const del = require('del');
 const babel = require('gulp-babel');
@@ -7,6 +8,8 @@ const autoprefixer = require('autoprefixer');
 const rename = require('gulp-rename');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('../tsconfig.json');
+
+sass.compiler = require('sass');
 
 gulp.task('clean:dist', done => del(['dist']));
 
@@ -25,7 +28,12 @@ gulp.task('build:ts', done => {
 gulp.task('build:wxss', done =>
   gulp
     .src('src/**/*.wxss')
-    .pipe(sass())
+    .pipe(
+      sass({ includePaths: path.join(process.cwd(), '..', 'styles') }).on(
+        'error',
+        sass.logError
+      )
+    )
     .pipe(postcss([autoprefixer()]))
     .pipe(rename({ extname: '.wxss' }))
     .pipe(gulp.dest('dist'))

@@ -32,7 +32,15 @@ function wxss(wxssFileList) {
       .src(wxssFileList, { cwd: srcPath, base: srcPath })
       // .pipe(checkWxss.start()) // 开始处理 import
       .pipe(gulpif(wxssConfig.sass && wxssConfig.sourcemap, sourcemaps.init()))
-      .pipe(gulpif(wxssConfig.sass, sass({ paths: [srcPath] })))
+      .pipe(
+        gulpif(
+          wxssConfig.sass,
+          sass({
+            paths: [srcPath],
+            includePaths: [path.join(process.cwd(), 'styles')],
+          })
+        )
+      )
       // .pipe(checkWxss.end()) // 结束处理 import
       .pipe(postcss([autoprefixer()]))
       .pipe(rename({ extname: '.wxss' }))

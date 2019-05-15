@@ -25,5 +25,4 @@ find $libpath -name "*.json.tmp" | xargs rm -rf
 
 # run tsc wxss build
 cd $rootpath/library
-echo $PWD
-$rootpath/node_modules/.bin/gulp --cwd $PWD
+$rootpath/node_modules/.bin/gulp
