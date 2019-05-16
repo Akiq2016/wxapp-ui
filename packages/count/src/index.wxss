@@ -1,0 +1,20 @@
+@import 'mixins/';
+
+@include b(count) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  line-height: 1;
+  color: #444;
+  font-size: 25px;
+
+  @include e(prefix) {
+    margin-right: 6rpx;
+    font-size: 14px;
+  }
+
+  @include e(suffix) {
+    margin-left: 6rpx;
+    font-size: 14px;
+  }
+}
