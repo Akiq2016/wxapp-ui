@@ -56,7 +56,7 @@ Component({
     addGlobalClass: true,
   },
   properties: {
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> value
+    // value
     amountValue: {
       type: null,
       value: 0,
@@ -74,7 +74,7 @@ Component({
       type: String,
       value: ''
     },
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> size
+    // size
     size: {
       type: String,
       observer(value: string) {
@@ -107,7 +107,7 @@ Component({
         }
       }
     },
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> color
+    // color
     color: {
       type: String,
       observer(value: string) {
@@ -140,7 +140,7 @@ Component({
         }
       }
     },
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> gap
+    // gap
     prefixGap: {
       type: String,
       observer(value: string) {
