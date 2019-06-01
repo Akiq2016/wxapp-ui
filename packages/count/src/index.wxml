@@ -1,0 +1,34 @@
+<wxs module="countModule">
+  function getCount(value, hasDecimalStyle, hasDecimalPart, getDecimal) {
+    if (hasDecimalPart && hasDecimalStyle) {
+      var valueList = value.toString().split('.');
+
+      // 获取原数值整数部分 | 获取原数值小数部分
+      return getDecimal
+        ? '.' + valueList[1]
+        : valueList[0];
+    } else {
+      // 获取原数值
+      return value;
+    }
+  }
+
+  module.exports = {
+    getCount: getCount
+  }
+</wxs>
+
+<view class="modo-count" style="{{amountStyleString}}">
+  <view class="modo-count__prefix" wx:if="{{prefixValue}}" style="{{prefixStyleString}}">
+  {{prefixValue}}
+  </view>
+  <view class="modo-count__amount">
+  {{countModule.getCount(amountValue, decimalStyleString, hasDecimalPart)}}
+  </view>
+  <view class="modo-count__decimal" wx:if="{{decimalStyleString && hasDecimalPart}}" style="{{decimalStyleString}}">
+  {{countModule.getCount(amountValue, decimalStyleString, hasDecimalPart, true)}}
+  </view>
+  <view class="modo-count__suffix" wx:if="{{suffixValue}}" style="{{suffixStyleString}}">
+  {{suffixValue}}
+  </view>
+</view>
