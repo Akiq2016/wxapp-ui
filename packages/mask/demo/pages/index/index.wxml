@@ -1,34 +1,31 @@
-
 <view class="page__main">
-    <view class="page__main__item">
-        <view>mask-status: {{maskStatus}}</view>
-        <switch checked="{{maskStatus}}" bindchange="changeMaskStatus"/>
-    </view>
-    <view class="page__main__item">
-        <view>监听tapmask来关闭弹层: {{useTapMaskEvent}}</view>
-        <switch checked="{{useTapMaskEvent}}" bindchange="toggleUseTapMaskEvent"/>
-    </view>
-    <view class="page__main__item">
-        <view>duration: {{duration}}</view>
-        <input placeholder="打开蒙层的时间" bindinput="changeDuration"/>
-    </view>
-    <view class="page__main__item">
-        <view>bg-color: {{bgColor}}</view>
-        <input placeholder="自定义蒙层背景颜色" bindinput="changeBgColor"/>
-    </view>
+  <view class="page__main__item">
+    <view>mask-status: {{maskStatus}}</view>
+    <switch checked="{{maskStatus}}" bindchange="changemaskStatus" value="{{maskStatus}}" />
+  </view>
+  <view class="page__main__item">
+    <view>监听tapmask来关闭弹层: {{useTapMaskEvent}}</view>
+    <switch checked="{{useTapMaskEvent}}" bindchange="changeuseTapMaskEvent" value="{{useTapMaskEvent}}" />
+  </view>
+  <view class="page__main__item">
+    <view>duration: {{duration}}</view>
+    <input placeholder="打开蒙层的时间" bindinput="changeduration" value="{{duration}}" />
+  </view>
+  <view class="page__main__item">
+    <view>bg-color: {{bgColor}}</view>
+    <input placeholder="自定义蒙层背景颜色" bindinput="changebgColor" value="{{bgColor}}" />
+  </view>
 </view>
-
 <mask
-    mask-status="{{maskStatus}}"
-    duration="{{duration}}"
-    bg-color="{{bgColor}}"
-    blur="{{blur}}"
-    bind:tapmask="handleTapMask">
-    <view
-        slot="content"
-        class="mask-content {{maskStatus ? 'mask-content--show' : ''}}">
-        <view class="content-detail" catch:tap="noop">
-            <button bind:tap="toggleMaskStatus">关闭</button>
-        </view>
+  mask-status="{{maskStatus}}"
+  duration="{{duration}}"
+  bg-color="{{bgColor}}"
+  blur="{{blur}}"
+  bind:tapmask="handleTapMask"
+>
+  <view slot="content" class="mask-content {{maskStatus ? 'mask-content--show' : ''}}">
+    <view class="content-detail" catch:tap="noop">
+      <button bind:tap="toggleMaskStatus">关闭</button>
     </view>
+  </view>
 </mask>

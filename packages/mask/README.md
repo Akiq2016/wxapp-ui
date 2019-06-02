@@ -34,7 +34,7 @@ npm install --save modo-mask
 | :---------------- |:---------------|:-------------------|:-------------------------|
 | maskStatus        | Boolean        | false              | 设置蒙层的显示状态          |
 | duration          | Number         | 200                | 设置蒙层出现的过渡时间       |
-| bgColor           | String         | rgba(0, 0, 0, 0.5) | 自定义蒙层背景颜色        |
+| bgColor           | String         | rgba(0, 0, 0, 0.5) | 自定义蒙层背景颜色          |
 
 ## Events
 

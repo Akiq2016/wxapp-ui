@@ -11,16 +11,16 @@ Page({
   toggleMaskStatus() {
     this.setData({ maskStatus: !this.data.maskStatus });
   },
-  toggleUseTapMaskEvent(e) {
+  changeuseTapMaskEvent(e) {
     this.setData({ useTapMaskEvent: e.detail.value });
   },
-  changeMaskStatus(e) {
+  changemaskStatus(e) {
     this.setData({ maskStatus: e.detail.value });
   },
-  changeDuration(e) {
+  changeduration(e) {
     this.setData({ duration: e.detail.value });
   },
-  changeBgColor(e) {
+  changebgColor(e) {
     this.setData({ bgColor: e.detail.value });
   },
   handleTapMask() {
