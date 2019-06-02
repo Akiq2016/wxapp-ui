@@ -1,0 +1,5 @@
+@import 'mixins/';
+
+@include b(placeholder) {
+  text-align: center;
+}

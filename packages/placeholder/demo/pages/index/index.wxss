@@ -1,0 +1,4 @@
+.page__main__item {
+  padding: 20rpx;
+  border: 1px solid;
+}
