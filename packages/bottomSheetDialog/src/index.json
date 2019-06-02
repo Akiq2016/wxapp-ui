@@ -1,6 +1,4 @@
 {
   "component": true,
-  "usingComponents": {
-    "mask": "modo-mask"
-  }
+  "usingComponents": {}
 }
