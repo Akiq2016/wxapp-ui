@@ -1,0 +1,8 @@
+<view class="modo-placeholder" style="background-color: {{backgroundColor}};">
+  <slot name="image"></slot>
+  <view
+    class="modo-placeholder__description"
+    style="color: {{descriptionColor}}; font-size: {{descriptionSize}}; "
+  >{{description}}</view>
+  <slot name="advanced"></slot>
+</view>

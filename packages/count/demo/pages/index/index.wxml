@@ -1,0 +1,76 @@
+<view class="modo-page">
+  <comp
+    amount-value="{{amountValue}}"
+    prefix-value="{{prefixValue}}"
+    suffix-value="{{suffixValue}}"
+    size="{{size}}"
+    prefix-size="{{prefixSize}}"
+    suffix-size="{{suffixSize}}"
+    decimal-size="{{decimalSize}}"
+    color="{{color}}"
+    prefix-color="{{prefixColor}}"
+    suffix-color="{{suffixColor}}"
+    decimal-color="{{decimalColor}}"
+    prefix-gap="{{prefixGap}}"
+    suffix-gap="{{suffixGap}}"
+    decimal-gap="{{decimalGap}}"
+  ></comp>
+  <view class="modo-page-main">
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">amountValue: {{amountValue}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入数值(必填)" bindchange="handleChangeamountValue" value="{{amountValue}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">prefixValue: {{prefixValue}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入前缀" bindchange="handleChangeprefixValue" value="{{prefixValue}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">suffixValue: {{suffixValue}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入后缀" bindchange="handleChangesuffixValue" value="{{suffixValue}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">size: {{size}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入字体大小" bindchange="handleChangesize" value="{{size}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">prefixSize: {{prefixSize}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入前缀字体大小" bindchange="handleChangeprefixSize" value="{{prefixSize}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">suffixSize: {{suffixSize}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入后缀字体大小" bindchange="handleChangesuffixSize" value="{{suffixSize}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">decimalSize: {{decimalSize}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入小数部分字体大小" bindchange="handleChangedecimalSize" value="{{decimalSize}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">color: {{color}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入颜色" bindchange="handleChangecolor" value="{{color}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">prefixColor: {{prefixColor}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入前缀颜色" bindchange="handleChangeprefixColor" value="{{prefixColor}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">suffixColor: {{suffixColor}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入后缀颜色" bindchange="handleChangesuffixColor" value="{{suffixColor}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">decimalColor: {{decimalColor}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入小数部分颜色" bindchange="handleChangedecimalColor" value="{{decimalColor}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">prefixGap: {{prefixGap}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入前缀与数值的间距" bindchange="handleChangeprefixGap" value="{{prefixGap}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">suffixGap: {{suffixGap}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入后缀与数值的间距" bindchange="handleChangesuffixGap" value="{{suffixGap}}" />
+    </view>
+    <view class="modo-page-main__item">
+      <view class="modo-page-main__item__display">decimalGap: {{decimalGap}}</view>
+      <input class="modo-page-main__item__form-item" placeholder="请输入小数部分与数值的间距" bindchange="handleChangedecimalGap" value="{{decimalGap}}" />
+    </view>
+  </view>
+</view>

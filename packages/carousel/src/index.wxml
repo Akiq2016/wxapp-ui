@@ -1,0 +1,72 @@
+<wxs module="carouselModule">
+function getFractionStyle(color, bgColor) {
+  var result = '';
+
+  if (color) {
+    result += 'color: ' + color + '; '
+  }
+
+  if (bgColor) {
+    result += 'background-color: ' + bgColor + '; '
+  }
+
+  return result;
+}
+
+module.exports = {
+  getFractionStyle: getFractionStyle,
+}
+</wxs>
+
+<view
+  class="modo-carousel__wrapper"
+  style="height: {{height}}"
+  bind:tap="handleTapCarousel"
+>
+  <swiper
+    class="modo-carousel"
+    duration="{{duration}}"
+    indicator-dots="{{indicatorType === 'dots'}}"
+    indicator-color="{{indicatorDotsColor}}"
+    indicator-active-color="{{indicatorDotsActiveColor}}"
+    bind:change="handleChangeCarousel"
+  >
+    <swiper-item
+      class="modo-carousel__item"
+      wx:for="{{thumbnailList}}"
+      wx:key="*this"
+    >
+      <image
+        class="modo-carousel__item__image"
+        lazy-load="true"
+        mode="{{imageMode}}"
+        data-index="{{index}}"
+        src="{{item}}"
+        binderror="handleCarouselImageError"
+      />
+    </swiper-item>
+  </swiper>
+  <block wx:if="{{listLength !== 0 && indicatorType !== 'dots'}}">
+    <!-- *-fraction -->
+    <view
+      wx:if="{{indicatorType === 'fraction' || indicatorType === 'custom-fraction'}}"
+      class="{{indicatorType === 'fraction' ? 'modo-carousel__indicator--fraction' : 'custom-fraction'}}"
+      style="{{indicatorType === 'fraction' ? carouselModule.getFractionStyle(indicatorFractionColor, indicatorFractionBgColor) : ''}}"
+    >
+      {{currentCarouselIndex + 1}}/{{listLength}}
+    </view>
+    <!-- custom-dots -->
+    <view
+      wx:if="{{indicatorType === 'custom-dots'}}"
+      class="custom-dots"
+    >
+      <view
+        class="custom-dots-item {{index === currentCarouselIndex ? 'custom-dots-item-active' : ''}}"
+        wx:for="{{thumbnailList}}"
+        wx:key="*this"
+      />
+    </view>
+    <!-- custom -->
+    <slot name="indicator"></slot>
+  </block>
+</view>

@@ -1,0 +1,60 @@
+{
+  "name": "modo-count",
+  "version": "1.0.0",
+  "description": "",
+  "main": "miniprogram_dist/index.js",
+  "scripts": {
+    "dev": "cross-env PKG_ID=count gulp dev --develop",
+    "watch": "cross-env PKG_ID=count gulp watch --develop --watch",
+    "build": "cross-env PKG_ID=count gulp",
+    "clean-dev": "cross-env PKG_ID=count gulp clean --develop",
+    "clean": "cross-env PKG_ID=count gulp clean",
+    "test": "jest ./test/* --bail",
+    "coverage": "jest ./test/* --coverage --bail",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint-demo": "eslint \"demo/**/*.js\" --rule \"import/no-extraneous-dependencies: false\""
+  },
+  "miniprogram": "miniprogram_dist",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testURL": "https://jest.test",
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "jsx",
+      "tsx",
+      "node"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "repository": "https://github.com/modojs/wxapp-ui/tree/master/packages/count",
+  "author": "akiq",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "babel-jest": "^24.7.1",
+    "cross-env": "^5.2.0",
+    "gulp": "^4.0.0",
+    "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "homepage": "https://github.com/modojs/wxapp-ui"
+}

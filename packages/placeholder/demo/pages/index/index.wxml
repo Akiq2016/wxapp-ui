@@ -1,0 +1,47 @@
+<comp
+  description="{{description}}"
+  description-color="{{descriptionColor}}"
+  description-size="{{descriptionSize}}"
+  background-color="{{backgroundColor}}"
+>
+  <image
+    slot="image"
+    wx:if="{{imageStatus}}"
+    style="width: 140px; height: 140px;"
+    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559486037128&di=876af55606f44d97b4f2433fba28b7a7&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0114595be9673ba801209252a141e2.jpg%401280w_1l_2o_100sh.jpg"
+  />
+
+  <button
+    slot="advanced"
+    wx:if="{{advancedStatus}}"
+    style="width: 40%;line-height: 80rpx;margin-top: 40rpx;font-size: 14px;border-radius: 40rpx;background-color: #0072ca;color: #fff;">
+    回到首页
+  </button>
+</comp>
+
+<view class="page__main">
+  <view class="page__main__item">
+    <view>description: {{description}}</view>
+    <input placeholder="缺省/占位描述" bindchange="handleChangedescription" value="{{description}}" />
+  </view>
+  <view class="page__main__item">
+    <view>是否使用image 插槽: {{imageStatus}}</view>
+    <switch checked="{{imageStatus}}" bindchange="handleChangeimageStatus" value="{{imageStatus}}" />
+  </view>
+  <view class="page__main__item">
+    <view>description-color: {{descriptionColor}}</view>
+    <input placeholder="缺省/占位描述的字体颜色" bindinput="handleChangedescriptionColor" value="{{descriptionColor}}" />
+  </view>
+  <view class="page__main__item">
+    <view>description-size: {{descriptionSize}}</view>
+    <input placeholder="缺省/占位描述的字体大小" bindinput="handleChangedescriptionSize" value="{{descriptionSize}}" />
+  </view>
+  <view class="page__main__item">
+    <view>background-color: {{backgroundColor}}</view>
+    <input placeholder="缺省/占位组件的背景颜色" bindinput="handleChangebackgroundColor" value="{{backgroundColor}}" />
+  </view>
+  <view class="page__main__item">
+    <view>是否使用advanced 插槽: {{advancedStatus}}</view>
+    <switch checked="{{advancedStatus}}" bindchange="handleChangeadvancedStatus" value="{{imageStatus}}" />
+  </view>
+</view>

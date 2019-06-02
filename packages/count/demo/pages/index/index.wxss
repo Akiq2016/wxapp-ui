@@ -1,0 +1,27 @@
+.modo-page {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.modo-page-main {
+  flex: 1;
+  padding-top: 15rpx;
+  background-color: #efefef;
+  overflow: scroll;
+}
+
+.modo-page-main__item {
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 15rpx;
+}
+
+.modo-page-main__item__display {
+  font-size: 14px;
+  color: #444;
+}
+
+.modo-page-main__item__form-item {
+  font-size: 14px;
+}

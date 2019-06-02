@@ -1,2 +1,31 @@
+.idea
 .DS_Store
+package-lock.json
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+miniprogram_dist
+miniprogram_dev
 node_modules
+coverage
+
+# exclude everything in library except
+# file: gulpfile
+# directory: library/src/pages
+# file: library/src/app.js
+# file: library/src/app.json
+# file: library/src/app.wxss
+# file: library/src/project.config.json
+/library/*
+!/library/gulpfile.js
+!/library/src
+/library/src/*
+!/library/src/pages
+!/library/src/app.js
+!/library/src/app.json
+!/library/src/app.wxss
+!/library/src/project.config.json
