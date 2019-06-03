@@ -15,17 +15,25 @@
     <view>bg-color: {{bgColor}}</view>
     <input placeholder="自定义蒙层背景颜色" bindinput="changebgColor" value="{{bgColor}}" />
   </view>
+  <view class="page__main__item">
+    <view>z-index: {{zIndex}}</view>
+    <input placeholder="自定义蒙层z-index" bindinput="changezIndex" value="{{zIndex}}" />
+  </view>
 </view>
-<mask
+<comp
   mask-status="{{maskStatus}}"
   duration="{{duration}}"
   bg-color="{{bgColor}}"
-  blur="{{blur}}"
+  z-index="{{zIndex}}"
   bind:tapmask="handleTapMask"
 >
-  <view slot="content" class="mask-content {{maskStatus ? 'mask-content--show' : ''}}">
+  <view
+    slot="content"
+    class="mask-content {{maskStatus ? 'mask-content--show' : ''}}"
+    style="z-index: {{zIndex + 1}};"
+  >
     <view class="content-detail" catch:tap="noop">
       <button bind:tap="toggleMaskStatus">关闭</button>
     </view>
   </view>
-</mask>
+</comp>

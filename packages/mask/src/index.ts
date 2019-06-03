@@ -29,12 +29,23 @@ Component({
           value: newVal,
         });
       }
+    },
+    zIndex: {
+      type: Number,
+      value: 100,
+      observer(newVal: number) {
+        this.setStyleDict({
+          type: 'z-index',
+          value: newVal,
+        });
+      }
     }
   },
   data: {
     maskStyleDict: {
       'transition-duration': { value: '200ms', priority: 0, prefix: '-webkit-' },
       'background-color': { value: 'rgba(0, 0, 0, 0.5)', priority: 0 },
+      'z-index': { value: 100, priority: 0 },
     },
     maskStyle: ''
   },

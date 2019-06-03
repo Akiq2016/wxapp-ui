@@ -6,6 +6,7 @@ Page({
     maskStatus: false,
     duration: '200ms',
     bgColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 100,
   },
   noop,
   toggleMaskStatus() {
@@ -22,6 +23,9 @@ Page({
   },
   changebgColor(e) {
     this.setData({ bgColor: e.detail.value });
+  },
+  changezIndex(e) {
+    this.setData({ zIndex: +e.detail.value });
   },
   handleTapMask() {
     if (this.data.useTapMaskEvent) {
