@@ -1,0 +1,26 @@
+<view class="modo-steps">
+  <block wx:for="{{steps}}" wx:key="{{index}}">
+    <view  class="modo-step__item">
+      <view class="modo-step__content">
+
+        <view
+          class="modo-step__content--img"
+          wx:if="{{index < active}}">
+          <image src="{{doneImg}}" mode="aspectFit"></image>
+        </view>
+        <view
+          class="modo-step__content--text {{index === active ? 'active' : ''}}"
+          style="{{index === active && activeColor ? 'background-color:'+activeColor : ''}}"
+          wx:else>
+          {{item.text}}
+        </view>
+
+      </view>
+      <view
+        class="modo-step__line"
+        style="{{index <= active && activeColor ? 'background-color:'+activeColor : ''}}"
+        wx:if="{{index !== 0}}">
+      </view>
+    </view>
+  </block>
+</view>

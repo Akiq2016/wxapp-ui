@@ -1,0 +1,37 @@
+.panel-group {
+  background-color: #ccc;
+}
+
+.panel-group:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.panel-title {
+  font-size: 14px;
+  padding: 20px 30px;
+}
+
+.panel-control {
+  padding: 30px;
+}
+
+.panel-properties {
+  padding: 0 30px 30px;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+.column:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.column:last-child {
+  flex: 60px 0 0;
+}
