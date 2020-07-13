@@ -35,7 +35,7 @@
     "miniprogram-simulate": "^1.0.0",
     "prettier": "^1.14.3",
     "sass": "^1.20.1",
-    "standard-version": "^4.4.0",
+    "standard-version": "^8.0.1",
     "through2": "^2.0.3",
     "ts-loader": "^5.3.0",
     "tslint": "^5.11.0",
